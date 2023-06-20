@@ -17,7 +17,7 @@ export default function PackagesSection() {
           <CardMedia
             component="img"
             height="140"
-            image="/static/images/prof-pic.JPG"
+            image="/static/images/prof-pic.jpg"
             alt="green iguana"
           />
           <CardContent>

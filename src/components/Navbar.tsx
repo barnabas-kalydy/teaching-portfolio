@@ -1,39 +1,40 @@
-import Button from "@mui/material/Button";
+import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-const StyledDiv = styled("div")({
-  backgroundColor: "red",
+const StyledContainerDiv = styled("div")({
+  backgroundColor: "black",
   display: "flex",
   justifyContent: "space-between",
   height: "3rem",
   alignItems: "center",
+  padding: "0.5rem",
+});
+
+const StyledLink = styled(HashLink)({
+  margin: "1rem",
 });
 
 const StyledButton = styled(Button)({
-  color: "black",
-  margin: "2rem",
+  color: "white",
 });
 
 export default function Navbar() {
-  const navigate = useNavigate();
-
   return (
-    <>
-      <StyledDiv>
-        <div>
-          <StyledButton onClick={() => navigate("/")}>KB</StyledButton>
-        </div>
-        <div>
-          <HashLink to="#packages" smooth>
-            Csomagok
-          </HashLink>
-          <HashLink to="#contact" smooth>
-            Elérhetőség
-          </HashLink>
-        </div>
-      </StyledDiv>
-    </>
+    <StyledContainerDiv>
+      <div>
+        <StyledLink to="#aboutme" smooth>
+          <StyledButton>KB</StyledButton>
+        </StyledLink>
+      </div>
+      <div>
+        <StyledLink to="#packages" smooth>
+          <StyledButton>Csomagok</StyledButton>
+        </StyledLink>
+        <StyledLink to="#contact" smooth>
+          <StyledButton>Elérhetőség</StyledButton>
+        </StyledLink>
+      </div>
+    </StyledContainerDiv>
   );
 }

@@ -7,6 +7,7 @@ import StudentProjectsSection from "../sections/StudentProjectsSection";
 
 const StyledContainer = styled("div")({
   padding: "3rem",
+  backgroundColor: "#15ab1f",
 });
 
 export default function HomePage() {
