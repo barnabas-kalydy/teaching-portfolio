@@ -1,42 +1,10 @@
+import Typography from "@mui/material/Typography";
+
 export default function ContactSection() {
   return (
     <div id="contact">
-      ContactSection
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      fajfaslfdsjsj
+      <Typography>Úgy gondolod tudnánk együtt dolgozni?</Typography>
+      Lépj kapcsolatba velem:
     </div>
   );
 }

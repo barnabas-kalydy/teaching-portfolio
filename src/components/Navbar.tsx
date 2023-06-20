@@ -24,7 +24,7 @@ export default function Navbar() {
     <StyledContainerDiv>
       <div>
         <StyledLink to="#aboutme" smooth>
-          <StyledButton>KB</StyledButton>
+          <StyledButton style={{ fontSize: "1.5rem" }}>KB</StyledButton>
         </StyledLink>
       </div>
       <div>
