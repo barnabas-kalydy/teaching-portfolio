@@ -6,7 +6,7 @@ function App() {
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={"home"} />
-        <Route path="contact" element={"contact"} />
+        <Route path="/contact" element={"contact"} />
         <Route path="*" element={"404 page here"} />
       </Routes>
     </BrowserRouter>
