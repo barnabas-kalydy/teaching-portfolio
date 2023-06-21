@@ -9,6 +9,7 @@ import {
   styled,
 } from "@mui/material";
 import { offers } from "../data";
+import { useNavigate } from "react-router-dom";
 
 const StyledContainerDiv = styled("div")({
   display: "flex",
@@ -18,7 +19,9 @@ const StyledContainerDiv = styled("div")({
   alignItems: "center",
 });
 
-export default function PackagesSection() {
+export default function OffersSection() {
+  const navigate = useNavigate();
+
   return (
     <div id="packages">
       <Typography sx={{ fontSize: "1.5rem" }}>
@@ -26,7 +29,11 @@ export default function PackagesSection() {
       </Typography>
       <StyledContainerDiv>
         {offers.map((offer, index) => (
-          <Card key={offer.name} style={{ width: index === 1 ? "40%" : "30%" }}>
+          <Card
+            key={offer.name}
+            style={{ width: index === 1 ? "40%" : "30%" }}
+            onClick={() => navigate(`/offer/${offer.name}`)}
+          >
             <CardActionArea>
               <CardMedia component="img" image={offer.imgPath} alt="😥" />
               <CardContent>
@@ -38,11 +45,6 @@ export default function PackagesSection() {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
           </Card>
         ))}
       </StyledContainerDiv>
