@@ -1,4 +1,3 @@
-import { styled } from "@mui/material/styles";
 import AboutMeSection from "../sections/AboutMeSection";
 import ContactSection from "../sections/ContactSection";
 import OffersSection from "../sections/OffersSection";
