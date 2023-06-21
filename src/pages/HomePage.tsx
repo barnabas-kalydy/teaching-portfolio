@@ -5,19 +5,22 @@ import OffersSection from "../sections/OffersSection";
 import StudentFeedbackSection from "../sections/StudentFeedbackSection";
 import StudentProjectsSection from "../sections/StudentProjectsSection";
 
-const StyledContainer = styled("div")({
-  padding: "2rem",
-  backgroundColor: " #15ab1f",
-});
-
 export default function HomePage() {
   return (
-    <StyledContainer>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "3rem",
+        backgroundColor: " #15ab1f",
+        padding: "3rem",
+      }}
+    >
       <AboutMeSection />
       <StudentFeedbackSection />
       <StudentProjectsSection />
       <OffersSection />
       <ContactSection />
-    </StyledContainer>
+    </div>
   );
 }
