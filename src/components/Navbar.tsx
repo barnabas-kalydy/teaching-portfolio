@@ -17,7 +17,7 @@ const StyledLink = styled(HashLink)({
 });
 
 const StyledButton = styled(Button)({
-  color: "white",
+  color: "#15ab1f",
 });
 
 export default function Navbar() {
