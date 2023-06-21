@@ -27,7 +27,7 @@ export default function AboutMeSection() {
             csoportos órák keretében egyaránt.
           </Typography>
         </div>
-        <img src="/static/images/prof-pic.jpg" style={{ maxWidth: "30%" }} />
+        <img src="prof-pic.jpg" style={{ maxWidth: "30%" }} />
       </StyledContainerDiv>
     </div>
   );
