@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const StyledContainerDiv = styled("div")({
@@ -20,20 +21,25 @@ const StyledButton = styled(Button)({
 });
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <StyledContainerDiv>
       <div>
-        <StyledLink to="#aboutme" smooth>
+        <StyledLink to="/#aboutme" smooth>
           <StyledButton style={{ fontSize: "1.5rem" }}>KB</StyledButton>
         </StyledLink>
       </div>
       <div>
-        <StyledLink to="#packages" smooth>
+        <StyledLink to="/#packages" smooth>
           <StyledButton>Csomagok</StyledButton>
         </StyledLink>
-        <StyledLink to="#contact" smooth>
+        <StyledLink to="/#contact" smooth>
           <StyledButton>Elérhetőség</StyledButton>
         </StyledLink>
+        <StyledButton onClick={() => navigate("/info")}>
+          Tájékoztató
+        </StyledButton>
       </div>
     </StyledContainerDiv>
   );

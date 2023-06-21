@@ -6,36 +6,67 @@ import {
   CardActions,
   Button,
   CardContent,
+  styled,
 } from "@mui/material";
+import { Offer } from "../types";
+
+const StyledContainerDiv = styled("div")({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  gap: "8%",
+});
+
+const offers: Offer[] = [
+  {
+    name: "Alap csomag",
+    description: "Ez lesz az alap csomag",
+    imgPath: "/static/images/prof-pic.jpg",
+  },
+  {
+    name: "Eggyel jobb csomag",
+    description: "Ez lesz az alap csomag",
+    imgPath: "/static/images/prof-pic.jpg",
+  },
+  {
+    name: "VIP csomag",
+    description: "Ez lesz az alap csomag",
+    imgPath: "/static/images/prof-pic.jpg",
+  },
+];
 
 export default function PackagesSection() {
   return (
     <div id="packages">
-      This is the packages section
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="/static/images/prof-pic.jpg"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
-        </CardActions>
-      </Card>
+      <Typography sx={{ fontSize: "1.5rem" }}>
+        Ha szeretnél együtt dolgozni velem, a következők szerint van lehetőséged
+      </Typography>
+      <StyledContainerDiv>
+        {offers.map((offer) => (
+          <Card key={offer.name}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                image={offer.imgPath}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {offer.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {offer.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+            </CardActions>
+          </Card>
+        ))}
+      </StyledContainerDiv>
     </div>
   );
 }
