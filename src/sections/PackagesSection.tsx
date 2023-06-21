@@ -8,32 +8,15 @@ import {
   CardContent,
   styled,
 } from "@mui/material";
-import { Offer } from "../types";
+import { offers } from "../data";
 
 const StyledContainerDiv = styled("div")({
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-around",
   gap: "8%",
+  alignItems: "center",
 });
-
-const offers: Offer[] = [
-  {
-    name: "Alap csomag",
-    description: "Ez lesz az alap csomag",
-    imgPath: "/static/images/prof-pic.jpg",
-  },
-  {
-    name: "Eggyel jobb csomag",
-    description: "Ez lesz az alap csomag",
-    imgPath: "/static/images/prof-pic.jpg",
-  },
-  {
-    name: "VIP csomag",
-    description: "Ez lesz az alap csomag",
-    imgPath: "/static/images/prof-pic.jpg",
-  },
-];
 
 export default function PackagesSection() {
   return (
@@ -42,14 +25,10 @@ export default function PackagesSection() {
         Ha szeretnél együtt dolgozni velem, a következők szerint van lehetőséged
       </Typography>
       <StyledContainerDiv>
-        {offers.map((offer) => (
-          <Card key={offer.name}>
+        {offers.map((offer, index) => (
+          <Card key={offer.name} style={{ width: index === 1 ? "40%" : "30%" }}>
             <CardActionArea>
-              <CardMedia
-                component="img"
-                image={offer.imgPath}
-                alt="green iguana"
-              />
+              <CardMedia component="img" image={offer.imgPath} alt="😥" />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {offer.name}
